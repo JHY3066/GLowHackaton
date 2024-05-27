@@ -41,7 +41,8 @@
         android:layout_marginLeft="68dp"
         android:layout_marginTop="454dp"
         android:background="@drawable/round"
-        android:text="@string/food" />
+        android:text="@string/food"
+        android:textColor="#1C32A5"/>
 
     <Button
         android:id="@+id/cloth"
@@ -52,7 +53,7 @@
         android:layout_marginLeft="68dp"
         android:layout_marginTop="536dp"
         android:background="@drawable/round"
-        android:text="@string/cloth" />
-
+        android:text="@string/cloth"
+        android:textColor="#1C32A5"/>
 </RelativeLayout>
 
