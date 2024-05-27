@@ -52,6 +52,18 @@
                 android:layout_height="wrap_content"
                 android:text="가게 이름"
                 android:padding="16dp" />
+            <Button
+                android:id="@+id/store_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="가게 이름"
+                android:padding="16dp" />
+            <Button
+                android:id="@+id/store_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="가게 이름"
+                android:padding="16dp" />
 
         </LinearLayout>
 
