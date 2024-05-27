@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="food">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#1C32A5</item>
+        <item name="android:fontFamily">Inter</item>
+        <item name="lineHeight">22sp</item>
+        <item name="android:background">@drawable/round</item>
+    </style>
+    <style name="cloth">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#1C32A5</item>
+        <item name="android:fontFamily">Inter</item>
+        <item name="lineHeight">22sp</item>
+        <item name="android:background">@drawable/round</item>
+
+    </style>
+    <style name="search_text">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#1C32A5</item>
+        <item name="android:fontFamily">Inter</item>
+        <item name="lineHeight">22sp</item>
+        <item name="android:background">@drawable/round</item>
+    </style>
+</resources>
