@@ -1,59 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/search"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:clipToOutline="true"
-    tools:context=".MainActivity"
-    android:background="#EFCD8B">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="328dp"
-        android:layout_height="68dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="39dp"
-        android:layout_marginTop="200dp"
-        android:background="@drawable/logo" />
+    <RelativeLayout
+        android:id="@+id/iphone_13_1"
+        android:layout_width="412dp"
+        android:layout_height="915dp"
+        android:background="#FBE5B8"
+        tools:ignore="MissingConstraints">
 
-    <SearchView
-        android:id="@+id/search_bar"
-        android:layout_width="320dp"
-        android:layout_height="47dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="320dp"
-        android:queryHint="@string/search_text"
-        android:iconifiedByDefault="false"
-        android:background="@drawable/round"
-        />
 
-    <Button
-        android:id="@+id/food"
-        android:layout_width="254dp"
-        android:layout_height="47dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="454dp"
-        android:background="@drawable/round"
-        android:text="@string/food"
-        android:textColor="#1C32A5"/>
+        <SearchView
+            android:id="@+id/search_bar"
+            android:layout_width="330dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="42dp"
+            android:layout_marginTop="212dp"
+            android:background="@drawable/round"
+            android:iconifiedByDefault="false"
+            android:queryHint="@string/search_text" />
 
-    <Button
-        android:id="@+id/cloth"
-        android:layout_width="254dp"
-        android:layout_height="47dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="536dp"
-        android:background="@drawable/round"
-        android:text="@string/cloth"
-        android:textColor="#1C32A5"/>
-</RelativeLayout>
+        <Button
+            android:id="@+id/search_icon"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="317dp"
+            android:layout_marginTop="221dp"
+            android:background="@drawable/search_icon" />
 
+
+        <View
+            android:id="@+id/logo"
+            android:layout_width="314.92dp"
+            android:layout_height="64dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="47dp"
+            android:layout_marginTop="83dp"
+            android:background="@drawable/logo" />
+
+        <View
+            android:id="@+id/market_list"
+            android:layout_width="410dp"
+            android:layout_height="492dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="-1dp"
+            android:layout_marginTop="345dp"
+            android:background="#D9D9D9" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

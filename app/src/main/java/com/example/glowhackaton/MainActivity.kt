@@ -1,32 +1,29 @@
 package com.example.glowhackaton
 
-import android.graphics.Color
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var search_bar: SearchView
-    private lateinit var food: Button
-    private lateinit var cloth: Button
-    private var isFoodPressed = true
-    private var isClothPressed = true
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         search_bar = findViewById(R.id.search_bar)
-        search_bar.queryHint="시장을 검색하세요"
+        search_bar.queryHint = "시장을 검색하세요"
         search_bar.isIconifiedByDefault = false
 
         search_bar.setOnClickListener {
@@ -35,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         search_bar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                query?.let {searchQuery(it)}
+                query?.let { searchQuery(it) }
                 return true
             }
 
@@ -44,34 +41,13 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        food = findViewById(R.id.food)
-        food.setOnClickListener {
-            if (isFoodPressed) {
-                food.background = getDrawable(R.drawable.round_after)
-                food.setTextColor(Color.WHITE)
-            }
-            else {
-                food.background = getDrawable(R.drawable.round)
-                food.setTextColor(Color.parseColor("#1C32A5"))
-            }
-            isFoodPressed = !isFoodPressed
-        }
+        var searchButton: Button = findViewById(R.id.search_icon)
 
-        cloth = findViewById(R.id.cloth)
-        cloth.setOnClickListener {
-            if (isClothPressed) {
-                cloth.background = getDrawable(R.drawable.round_after)
-                cloth.setTextColor(Color.WHITE)
-            }
-            else {
-                cloth.background = getDrawable(R.drawable.round)
-                cloth.setTextColor(Color.parseColor("#1C32A5"))
-            }
-            isClothPressed = !isClothPressed
+        searchButton.setOnClickListener {
+            val intent = Intent(this, SelectActivity::class.java)
+            startActivity(intent)
         }
-
     }
-
     private fun showKeyboard() {
         val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
         imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0)
@@ -105,3 +81,5 @@ class MainActivity : AppCompatActivity() {
             .show()
     }
 }
+
+
