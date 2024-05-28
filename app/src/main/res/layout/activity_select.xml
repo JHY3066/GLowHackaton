@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    tools:context=".SelectActivity"
+    android:background="#FBE5B8">
+
+    <View
+        android:id="@+id/logo"
+        android:layout_width="314.92dp"
+        android:layout_height="64dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="83dp"
+        android:background="@drawable/logo" />
+
+    <View
+        android:id="@+id/rectangle_4"
+        android:layout_width="361dp"
+        android:layout_height="248dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="199dp"
+        android:background="#D9D9D9"
+        />
+
+    <Button
+        android:id="@+id/food"
+        android:layout_width="174dp"
+        android:layout_height="85dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="23dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="522dp"
+        android:background="@drawable/round"
+        android:text="@string/food"
+        android:drawableStart="@drawable/food"
+        android:padding="10dp"
+        />
+
+    <Button
+        android:id="@+id/cloth"
+        android:layout_width="174dp"
+        android:layout_height="85dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="214dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="522dp"
+        android:background="@drawable/round"
+        android:text="@string/cloth"
+        android:drawableStart="@drawable/cloth"
+        android:padding="10dp"
+        />
+
+    <Button
+        android:id="@+id/all_store"
+        android:layout_width="365dp"
+        android:layout_height="85dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="23dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="632dp"
+        android:background="@drawable/round"
+        android:text="@string/store"
+        />
+
+
+</RelativeLayout>
+
