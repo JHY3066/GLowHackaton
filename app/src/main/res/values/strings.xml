@@ -1,9 +1,21 @@
 <resources>
-    <string name="app_name">GLowHackaton</string>
+    <string name="app_name">J_market</string>
     <string name="market_text">
             시장 검색
         </string>
     <string name="banner">
             (1 / 10)
         </string>
+    <string name="search_text">
+        시장을 검색하세요
+    </string>
+    <string name="food">
+        식당
+    </string>
+    <string name="cloth">
+        옷가게
+    </string>
+    <string name="store">
+        전체 가게 보기
+    </string>
 </resources>

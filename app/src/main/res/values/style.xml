@@ -13,4 +13,27 @@
         <item name="fontFamily">Roboto</item>
         <item name="lineHeight">20sp</item>
     </style>
+    <style name="food">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#1C32A5</item>
+        <item name="android:fontFamily">Inter</item>
+        <item name="lineHeight">22sp</item>
+    </style>
+
+    <style name="cloth">
+        <item name="android:background">@drawable/round</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#1C32A5</item>
+        <item name="android:fontFamily">Inter</item>
+        <item name="lineHeight">22sp</item>
+    </style>
+
+    <style name="search_text">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#1C32A5</item>
+        <item name="android:fontFamily">Inter</item>
+        <item name="lineHeight">22sp</item>
+        <item name="android:background">@drawable/round</item>
+    </style>
+
 </resources>
