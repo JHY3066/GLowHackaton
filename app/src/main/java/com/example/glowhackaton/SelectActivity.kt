@@ -1,6 +1,7 @@
 package com.example.glowhackaton
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
@@ -64,6 +65,14 @@ class SelectActivity : AppCompatActivity() {
                 store.setTextColor(Color.parseColor("#1C32A5"))
             }
             isStorePressed = !isStorePressed
+        }
+
+        val foodButton: Button = findViewById(R.id.food)
+        foodButton.setOnClickListener {
+            // MapActivity로 이동하는 인텐트를 생성합니다.
+            val intent = Intent(this, MapActivity::class.java)
+            // 생성된 인텐트를 실행하여 MapActivity로 이동합니다.
+            startActivity(intent)
         }
 
     }
