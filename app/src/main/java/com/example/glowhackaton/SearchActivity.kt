@@ -14,13 +14,13 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class MainActivity : AppCompatActivity() {
+class SearchActivity : AppCompatActivity() {
     private lateinit var search_bar: SearchView
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_search)
 
         search_bar = findViewById(R.id.search_bar)
         search_bar.queryHint = "시장을 검색하세요"
@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
                 withContext(Dispatchers.Main) {
                     if (response.isSuccessful && response.body()?.success == true) {
                         // 검색 성공 처리
-                        Toast.makeText(this@MainActivity, "검색 성공: ${response.body()?.data}", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@SearchActivity, "검색 성공: ${response.body()?.data}", Toast.LENGTH_SHORT).show()
                     } else {
                         // 검색 실패 처리 (팝업 표시)
                         showAlertDialog("검색 결과가 없습니다")
