@@ -9,13 +9,13 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
-class MainActivity : AppCompatActivity(), OnMapReadyCallback {
+class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mapView: MapView
     private lateinit var googleMap: GoogleMap
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_map)
 
         mapView = findViewById(R.id.map_view)
         mapView.onCreate(savedInstanceState)
