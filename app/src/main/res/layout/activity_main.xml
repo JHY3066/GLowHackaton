@@ -5,6 +5,93 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFCD8B"
+    android:background="#FBE5B8"
     tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/iphone_13_1"
+        android:layout_width="412dp"
+        android:layout_height="915dp"
+        tools:ignore="MissingConstraints">
+
+        <View
+            android:id="@+id/logo"
+            android:layout_width="246dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="82dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="37dp"
+            android:background="@drawable/logo"
+            />
+
+        <Button
+            android:id="@+id/market_search"
+            android:layout_width="174dp"
+            android:layout_height="134dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="23dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="178dp"
+            android:background="@color/white"
+            />
+
+        <ImageView
+            android:id="@+id/market_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="41dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="221dp"
+            android:src="@drawable/market"
+            />
+
+        <Button
+            android:id="@+id/add_store"
+            android:layout_width="174dp"
+            android:layout_height="134dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="212dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="178dp"
+            android:background="@color/white"
+            />
+
+        <ImageView
+            android:id="@+id/store_icon"
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="229dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="216dp"
+            android:background="@drawable/store"
+            />
+
+        <View
+            android:id="@+id/rectangle_2"
+            android:layout_width="408dp"
+            android:layout_height="224dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="1dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="373dp"
+            android:background="@drawable/potato"
+            />
+
+        <TextView
+            android:id="@+id/banner"
+            android:layout_width="74dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="331dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="382dp"
+            android:text="@string/banner"
+            android:textAppearance="@style/banner"
+            android:lineSpacingExtra="6sp"
+            android:gravity="center_horizontal|center_vertical"
+            />
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
