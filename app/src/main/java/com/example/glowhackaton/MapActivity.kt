@@ -1,50 +1,54 @@
 package com.example.glowhackaton
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.ScrollView
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.MapView
-import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
 
-class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
-    private lateinit var mapView: MapView
-    private lateinit var googleMap: GoogleMap
+class MapActivity : AppCompatActivity() {
+
+    private lateinit var scrollView: ScrollView
+    private lateinit var linearLayout: LinearLayout
+    private lateinit var store: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_map)
 
-        mapView = findViewById(R.id.map_view)
-        mapView.onCreate(savedInstanceState)
-        mapView.getMapAsync(this)
+        scrollView = findViewById(R.id.scroll_view)
+        linearLayout = scrollView.getChildAt(0) as LinearLayout
+        store = findViewById(R.id.store_1)
+
+        store.setOnClickListener {
+            changeToSingleButton()
+        }
     }
 
-    override fun onMapReady(map: GoogleMap) {
-        googleMap = map
-        val market = LatLng(35.881422, 128.609320)
-        googleMap.addMarker(MarkerOptions().position(market).title("동대구 신시장"))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(market, 19f))
-    }
+    private fun changeToSingleButton() {
+        // 기존 LinearLayout의 모든 뷰를 제거
+        linearLayout.removeAllViews()
 
-    override fun onResume() {
-        super.onResume()
-        mapView.onResume()
-    }
+        // 새로운 버튼 생성
+        val singleButton = Button(this).apply {
+            layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            )
+            text = "가게 세부 정보"
+            setPadding(16, 16, 16, 16)
+        }
 
-    override fun onPause() {
-        super.onPause()
-        mapView.onPause()
-    }
+        singleButton.setOnClickListener {
+            val intent = Intent(
+                this@MapActivity,
+                StoreActivity::class.java
+            )
+            startActivity(intent)
+        }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        mapView.onDestroy()
-    }
-    override fun onLowMemory() {
-        super.onLowMemory()
-        mapView.onLowMemory()
+        // LinearLayout에 새로운 버튼 추가
+        linearLayout.addView(singleButton)
     }
 }

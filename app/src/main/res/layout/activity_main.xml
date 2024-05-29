@@ -47,7 +47,7 @@
         android:layout_width="174dp"
         android:layout_height="134dp"
         android:layout_marginStart="24dp"
-        android:background="@color/white"
+        android:background="@drawable/round"
         android:drawableStart="@drawable/market"
         android:drawablePadding="16dp"
         android:gravity="center_vertical"
@@ -57,23 +57,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo"
         app:layout_constraintVertical_bias="0.214" />
-
-    <Button
-        android:id="@+id/add_store"
-        android:layout_width="174dp"
-        android:layout_height="134dp"
-        android:layout_marginStart="20dp"
-        android:background="@color/white"
-        android:drawableStart="@drawable/store"
-        android:drawablePadding="16dp"
-        android:gravity="center_vertical"
-        android:padding="16dp"
-        android:text="점포 등록"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/market_search"
-        app:layout_constraintTop_toBottomOf="@id/logo"
-        app:layout_constraintVertical_bias="0.214" />
-
-    <!-- 다른 뷰들의 제약 조건을 추가하세요 -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

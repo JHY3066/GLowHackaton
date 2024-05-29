@@ -18,4 +18,29 @@
     <string name="store">
         전체 가게 보기
     </string>
+    <string name="store_name">
+            세엽이네 백반집
+        </string>
+    <string name="location">
+            대구 북구 대현로 20길 30
+        </string>
+    <string name="num">
+            055-123-8282
+        </string>
+    <string name="hashtag">
+            #밑반찬이_맛있는집 #저렴한_식당 #사장님_불친절
+        </string>
+    <string name="info">
+            영업시간 : 09:00-20:30\n
+            매주 월요일 휴무
+        </string>
+    <string name="send">
+        전송
+    </string>
+    <string name="speech">
+        사장님이 맛있고 음식이 불친절해요
+    </string>
+    <string name="speech2">
+        백반맛집!
+    </string>
 </resources>

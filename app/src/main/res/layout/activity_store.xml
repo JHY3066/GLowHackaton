@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/store"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToOutline="true"
+        android:background="#FBE5B8">
+
+        <View
+            android:id="@+id/store_info"
+            android:layout_width="334dp"
+            android:layout_height="215dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/store_info"
+            />
+
+        <View
+            android:id="@+id/call_icon"
+            android:layout_width="37dp"
+            android:layout_height="33dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="184dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="106dp"
+            android:background="@drawable/call_icon"
+            />
+
+
+        <View
+            android:id="@+id/food_icon"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="44dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="37dp"
+            android:background="@drawable/food"
+            />
+
+        <View
+            android:id="@+id/line_2"
+            android:layout_width="333dp"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="31dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="105dp"
+            android:background="@color/black"
+            />
+
+
+        <View
+            android:id="@+id/line_4"
+            android:layout_width="333dp"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="31dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="140dp"
+            android:background="@color/black"
+            />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="182dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="105dp"
+            android:background="@color/black"
+            />
+
+
+        <TextView
+            android:id="@+id/store_name"
+            android:layout_width="229dp"
+            android:layout_height="52dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="119dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="43dp"
+            android:text="@string/store_name"
+            android:textAppearance="@style/some_id"
+            android:gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/store_location"
+            android:layout_width="136dp"
+            android:layout_height="33dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="43dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="106dp"
+            android:text="@string/location"
+            android:textAppearance="@style/some_id"
+            android:gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/call_num"
+            android:layout_width="96dp"
+            android:layout_height="33dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="231dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="106dp"
+            android:text="@string/num"
+            android:textAppearance="@style/some_id"
+            android:gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/hashtag"
+            android:layout_width="287dp"
+            android:layout_height="33dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="52dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="197dp"
+            android:text="@string/hashtag"
+            android:textAppearance="@style/some_id"
+            android:gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="116dp"
+            android:layout_height="34dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="149dp"
+            android:text="@string/info"
+            android:textAppearance="@style/some_id"
+            android:gravity="center_vertical"
+            />
+
+        <View
+            android:id="@+id/comment"
+            android:layout_width="330dp"
+            android:layout_height="540dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="260dp"
+            android:background="@drawable/store_info"
+            />
+
+        <View
+            android:id="@+id/enter"
+            android:layout_width="330dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="768dp"
+            android:background="@drawable/round"
+            />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="46dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="314dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="768dp"
+            android:background="@drawable/round_after"
+            android:text="@string/send"
+            android:textAppearance="@style/some_idw"
+            />
+
+
+
+        <TextView
+            android:id="@+id/speech"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="43dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="275dp"
+            android:background="@drawable/speech"
+            android:text="@string/speech"
+            android:textAppearance="@style/some_id"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/speech2"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="43dp"
+            android:layout_marginTop="321dp"
+            android:background="@drawable/speech"
+            android:gravity="center"
+            android:text="@string/speech2"
+            android:textAppearance="@style/some_id" />
+
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
