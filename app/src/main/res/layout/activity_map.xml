@@ -5,68 +5,49 @@
     android:id="@+id/map"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFCD8B"
     tools:context=".MapActivity">
 
-    <View
-        android:id="@+id/map_view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="12dp"
-        app:layout_constraintBottom_toTopOf="@id/scroll_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHeight_percent="0.75"
-        android:background="@drawable/map" />
-
-    <ScrollView
-        android:id="@+id/scroll_view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/map_view"
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/some_id"
+        android:layout_width="412dp"
+        android:layout_height="915dp"
+        android:clipToOutline="true"
+        android:background="#FBE5B8"
         tools:ignore="MissingConstraints">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        <View
+            android:id="@+id/map_view"
+            android:layout_width="362dp"
+            android:layout_height="539dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="23dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="31dp"
+            android:background="@drawable/map" />
 
-            <Button
-                android:id="@+id/store_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="가게 이름"
-                android:padding="16dp" />
-            <Button
-                android:id="@+id/store_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="가게 이름"
-                android:padding="16dp" />
-            <Button
-                android:id="@+id/store_3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="가게 이름"
-                android:padding="16dp" />
-            <Button
-                android:id="@+id/store_4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="가게 이름"
-                android:padding="16dp" />
-            <Button
-                android:id="@+id/store_5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="가게 이름"
-                android:padding="16dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="365dp"
+            android:layout_height="260dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="582dp"
+        android:background="@color/white"/>
 
-        </LinearLayout>
+    <Button
+        android:id="@+id/info"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="582dp"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:text="가게 세부 정보" />
 
-    </ScrollView>
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

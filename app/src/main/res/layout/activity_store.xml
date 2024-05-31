@@ -110,13 +110,12 @@
             android:layout_width="96dp"
             android:layout_height="33dp"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="231dp"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="106dp"
-            android:text="@string/num"
-            android:textAppearance="@style/some_id"
+            android:layout_marginLeft="187dp"
+            android:layout_marginTop="212dp"
             android:gravity="center_vertical"
-            />
+            android:text="@string/num"
+            android:textAppearance="@style/some_id" />
 
         <TextView
             android:id="@+id/hashtag"
@@ -144,14 +143,26 @@
             android:gravity="center_vertical"
             />
 
-        <View
-            android:id="@+id/comment"
+        <TextView
             android:layout_width="330dp"
-            android:layout_height="540dp"
+            android:layout_height="219dp"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="30dp"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="260dp"
+            android:layout_marginTop="249dp"
+            android:background="@drawable/store_info"
+            android:text="MENU\n삼겹구이                          5000\n 오늘의 메뉴                    7000\n 제육볶음                         5500"
+            android:textAppearance="@style/some_id"
+            android:gravity="left"/>
+
+        <View
+            android:id="@+id/comment"
+            android:layout_width="330dp"
+            android:layout_height="323dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="477dp"
             android:background="@drawable/store_info"
             />
 
@@ -188,7 +199,7 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="43dp"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="275dp"
+            android:layout_marginTop="491dp"
             android:background="@drawable/speech"
             android:text="@string/speech"
             android:textAppearance="@style/some_id"
@@ -202,7 +213,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="43dp"
-            android:layout_marginTop="321dp"
+            android:layout_marginTop="537dp"
             android:background="@drawable/speech"
             android:gravity="center"
             android:text="@string/speech2"

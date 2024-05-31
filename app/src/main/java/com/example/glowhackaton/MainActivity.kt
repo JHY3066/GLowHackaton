@@ -9,13 +9,23 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager.widget.ViewPager
+import com.example.glowhackaton.adapter.BannerPagerAdapter
+import com.example.glowhackaton.model.ResponseAllMarket
+import com.example.glowhackaton.network.RetrofitClient
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var viewPager: ViewPager
     private lateinit var dotsLayout: LinearLayout
     private lateinit var bannerPagerAdapter: BannerPagerAdapter
+    private  lateinit var viewModel: MarketViewModel
     private val images = listOf(
         R.drawable.banner_image1,
         R.drawable.banner_image2,
@@ -67,8 +77,33 @@ class MainActivity : AppCompatActivity() {
             }
         }, DELAY_MS)
 
+        viewModel = ViewModelProvider(this).get(MarketViewModel::class.java)
+
         val marketSearchButton: Button = findViewById(R.id.market_search)
         marketSearchButton.setOnClickListener {
+            /*CoroutineScope(Dispatchers.IO).launch {
+                try {
+                    val response = RetrofitClient.marketService.getMarket()
+                    withContext(Dispatchers.Main) {
+                        if (response.isSuccessful) {
+                            val marketResponse: ResponseAllMarket? = response.body()
+                            marketResponse.let {
+                                if (marketResponse != null) {
+                                    viewModel.setMarketResponse(marketResponse)
+                                }
+                                val intent = Intent(this@MainActivity, SearchActivity::class.java)
+                                startActivity(intent)
+                            }
+                        }
+                        else {
+                            //요청 실패 시?
+                        }
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+            }
+        }*/
             val intent = Intent(this, SearchActivity::class.java)
             startActivity(intent)
         }

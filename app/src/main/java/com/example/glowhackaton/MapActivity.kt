@@ -1,54 +1,65 @@
 package com.example.glowhackaton
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.ScrollView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.glowhackaton.adapter.MarketListAdapter
+import com.example.glowhackaton.adapter.StoreListAdapter
 
 
 class MapActivity : AppCompatActivity() {
 
-    private lateinit var scrollView: ScrollView
-    private lateinit var linearLayout: LinearLayout
-    private lateinit var store: Button
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: StoreListAdapter
+    private lateinit var button: Button
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_map)
 
-        scrollView = findViewById(R.id.scroll_view)
-        linearLayout = scrollView.getChildAt(0) as LinearLayout
-        store = findViewById(R.id.store_1)
+        recyclerView = findViewById(R.id.recyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
-        store.setOnClickListener {
-            changeToSingleButton()
+        val dataList = getDummyData()
+        adapter = StoreListAdapter(this, dataList) {
+            selectedItem -> showButton(selectedItem)
+        }
+        recyclerView.adapter = adapter
+
+        //항목 구분선
+        val dividerItemDecoration = DividerItemDecoration(recyclerView.context, LinearLayoutManager.VERTICAL)
+        recyclerView.addItemDecoration(dividerItemDecoration)
+
+        button = findViewById(R.id.info)
+    }
+
+    private fun showButton(selectedItem: String) {
+        recyclerView.visibility = View.GONE
+
+        button.text = selectedItem
+        button.visibility = View.VISIBLE
+        button.setOnClickListener {
+            val intent = Intent(this, StoreActivity::class.java)
+            startActivity(intent)
         }
     }
 
-    private fun changeToSingleButton() {
-        // 기존 LinearLayout의 모든 뷰를 제거
-        linearLayout.removeAllViews()
-
-        // 새로운 버튼 생성
-        val singleButton = Button(this).apply {
-            layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            )
-            text = "가게 세부 정보"
-            setPadding(16, 16, 16, 16)
+    private fun getDummyData(): MutableList<String> {
+        val data = mutableListOf<String>()
+        for (i in 1..10) {
+            data.add("Store $1")
         }
-
-        singleButton.setOnClickListener {
-            val intent = Intent(
-                this@MapActivity,
-                StoreActivity::class.java
-            )
-            startActivity(intent)
-        }
-
-        // LinearLayout에 새로운 버튼 추가
-        linearLayout.addView(singleButton)
+        return data
     }
 }

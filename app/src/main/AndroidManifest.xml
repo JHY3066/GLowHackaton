@@ -27,6 +27,8 @@
         <activity android:name=".SelectActivity"/>
         <activity android:name=".MapActivity"/>
         <activity android:name=".StoreActivity"/>
+        <activity android:name=".AddActivity"/>
+        <activity android:name=".RegisterActivity"/>
 
     </application>
 

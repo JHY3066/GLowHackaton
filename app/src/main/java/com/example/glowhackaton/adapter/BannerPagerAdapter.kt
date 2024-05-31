@@ -1,4 +1,4 @@
-package com.example.glowhackaton
+package com.example.glowhackaton.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context

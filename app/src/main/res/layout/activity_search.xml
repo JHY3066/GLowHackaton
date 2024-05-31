@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:id="@+id/iphone_13_1"
@@ -12,7 +13,7 @@
         tools:ignore="MissingConstraints">
 
 
-        <SearchView
+        <androidx.appcompat.widget.SearchView
             android:id="@+id/search_bar"
             android:layout_width="330dp"
             android:layout_height="60dp"
@@ -22,7 +23,7 @@
             android:layout_marginTop="212dp"
             android:background="@drawable/round"
             android:iconifiedByDefault="false"
-            android:queryHint="@string/search_text" />
+            android:queryHint="시장을 검색하세요" />
 
         <Button
             android:id="@+id/search_icon"
@@ -45,17 +46,27 @@
             android:layout_marginTop="83dp"
             android:background="@drawable/logo" />
 
-        <TextView
-            android:id="@+id/market_list"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="410dp"
             android:layout_height="492dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="-1dp"
             android:layout_marginTop="345dp"
-            android:background="#D9D9D9"
-            android:text="시장 목록"
-            android:gravity="center"/>
+            android:background="@color/white"/>
+
+        <Button
+            android:id="@+id/info"
+            android:layout_width="410dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="-1dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="582dp"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:text="시장 세부 정보" />
 
     </RelativeLayout>
 

@@ -5,68 +5,68 @@
     android:id="@+id/map"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFCD8B"
     tools:context=".MapActivity">
 
-    <View
-        android:id="@+id/map_view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="12dp"
-        app:layout_constraintBottom_toTopOf="@id/scroll_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHeight_percent="0.75"
-        android:background="@drawable/map" />
-
-    <ScrollView
-        android:id="@+id/scroll_view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/map_view"
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/some_id"
+        android:layout_width="412dp"
+        android:layout_height="915dp"
+        android:clipToOutline="true"
+        android:background="#FBE5B8"
         tools:ignore="MissingConstraints">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        <View
+            android:id="@+id/map_view"
+            android:layout_width="362dp"
+            android:layout_height="539dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="23dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="31dp"
+            android:background="@drawable/map" />
 
-            <Button
-                android:id="@+id/store_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="가게 이름"
-                android:padding="16dp" />
-            <Button
-                android:id="@+id/store_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="가게 이름"
-                android:padding="16dp" />
-            <Button
-                android:id="@+id/store_3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="가게 이름"
-                android:padding="16dp" />
-            <Button
-                android:id="@+id/store_4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="가게 이름"
-                android:padding="16dp" />
-            <Button
-                android:id="@+id/store_5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="가게 이름"
-                android:padding="16dp" />
+        <Button
+            android:id="@+id/food"
+            android:layout_width="174dp"
+            android:layout_height="85dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="28dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="620dp"
+            android:background="@drawable/round"
+            android:text="@string/food"
+            android:drawableStart="@drawable/food"
+            android:padding="10dp"
+            />
 
-        </LinearLayout>
+        <Button
+            android:id="@+id/cloth"
+            android:layout_width="174dp"
+            android:layout_height="85dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="211dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="619dp"
+            android:background="@drawable/round"
+            android:text="@string/cloth"
+            android:drawableStart="@drawable/cloth"
+            android:padding="10dp"
+            />
 
-    </ScrollView>
+        <Button
+            android:id="@+id/add_store"
+            android:layout_width="365dp"
+            android:layout_height="85dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="728dp"
+            android:background="@drawable/round"
+            android:text="등록하러가기"
+            android:textAppearance="@style/some_idb"
+            />
+
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

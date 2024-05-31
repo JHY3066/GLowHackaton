@@ -20,17 +20,112 @@
         android:layout_marginTop="57dp"
         android:background="@drawable/logo" />
 
-    <TextView
-        android:id="@+id/rectangle_4"
+    <View
+        android:id="@+id/market_info"
         android:layout_width="361dp"
         android:layout_height="248dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="24dp"
+        android:layout_marginLeft="25dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="269dp"
-        android:background="#D9D9D9"
-        android:text="시장 정보"
-        android:gravity="center"
+        android:layout_marginTop="264dp"
+        android:background="@drawable/store_info"
+        />
+
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="361dp"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="302dp"
+        android:background="@color/black"
+        />
+
+    <View
+        android:id="@+id/line_3"
+        android:layout_width="361dp"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="337dp"
+        android:background="@color/black"
+        />
+
+    <View
+        android:id="@+id/call_icon"
+        android:layout_width="37dp"
+        android:layout_height="33dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="212dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="303dp"
+        android:background="@drawable/call_icon"
+        />
+
+    <TextView
+        android:id="@+id/market_name"
+        android:layout_width="359dp"
+        android:layout_height="39dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="263dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="동대구 시장"
+        android:textAppearance="@style/name" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="157dp"
+        android:layout_height="33dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="31dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="303dp"
+        android:text="주소"
+        android:textAppearance="@style/some_id"
+        android:gravity="center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/call_num"
+        android:layout_width="96dp"
+        android:layout_height="33dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="254dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="303dp"
+        android:text="전화번호"
+        android:textAppearance="@style/some_id"
+        android:gravity="center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/hashtag"
+        android:layout_width="286dp"
+        android:layout_height="51dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="383dp"
+        android:gravity="center_vertical"
+        android:text="해시태그\n해시태그"
+        android:textAppearance="@style/some_id" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="166dp"
+        android:layout_height="34dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="33dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="346dp"
+        android:text="영업시간\n연중무휴"
+        android:textAppearance="@style/some_id"
+        android:gravity="center_vertical"
         />
 
     <Button
@@ -75,18 +170,19 @@
 
     <Button
         android:id="@+id/add_store"
-        android:layout_width="174dp"
+        android:layout_width="278dp"
         android:layout_height="70dp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="23dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="169dp"
-        android:background="@color/white"
+        android:background="@drawable/round"
         android:drawableStart="@drawable/store"
         android:drawablePadding="16dp"
         android:gravity="center_vertical"
         android:padding="16dp"
-        android:text="점포 등록"
+        android:text="나만 아는 가게 등록하기"
+        android:textAppearance="@style/some_idb"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo"
         app:layout_constraintVertical_bias="0.214" />
