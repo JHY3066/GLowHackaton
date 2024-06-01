@@ -26,7 +26,8 @@
         <activity android:name=".SearchActivity"/>
         <activity android:name=".SelectActivity"/>
         <activity android:name=".MapActivity"/>
-        <activity android:name=".StoreActivity"/>
+        <activity android:name=".StoreActivity"
+            android:windowSoftInputMode="adjustResize"/>
         <activity android:name=".AddActivity"/>
         <activity android:name=".RegisterActivity"/>
 

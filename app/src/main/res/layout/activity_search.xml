@@ -1,73 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout
-        android:id="@+id/iphone_13_1"
-        android:layout_width="412dp"
-        android:layout_height="915dp"
-        android:background="#FBE5B8"
-        tools:ignore="MissingConstraints">
+    android:id="@+id/iphone_13_1"
+    android:layout_width="412dp"
+    android:layout_height="915dp"
+    android:background="#FBE5B8"
+    tools:ignore="MissingConstraints">
 
 
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_bar"
-            android:layout_width="330dp"
-            android:layout_height="60dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="42dp"
-            android:layout_marginTop="212dp"
-            android:background="@drawable/round"
-            android:iconifiedByDefault="false"
-            android:queryHint="시장을 검색하세요" />
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="212dp"
+        android:background="@drawable/round"
+        android:iconifiedByDefault="false"
+        android:hint="시장을 검색하세요"
+        android:padding="13dp"/>
 
-        <Button
-            android:id="@+id/search_icon"
-            android:layout_width="41dp"
-            android:layout_height="41dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="317dp"
-            android:layout_marginTop="221dp"
-            android:background="@drawable/search_icon" />
+    <Button
+        android:id="@+id/search_icon"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="317dp"
+        android:layout_marginTop="221dp"
+        android:background="@drawable/search_icon"
+        android:padding="7dp"
+        android:drawableStart="@drawable/search"/>
 
 
-        <View
-            android:id="@+id/logo"
-            android:layout_width="314.92dp"
-            android:layout_height="64dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="47dp"
-            android:layout_marginTop="83dp"
-            android:background="@drawable/logo" />
+    <View
+        android:id="@+id/logo"
+        android:layout_width="314.92dp"
+        android:layout_height="64dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="83dp"
+        android:background="@drawable/logo" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="410dp"
-            android:layout_height="492dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="-1dp"
-            android:layout_marginTop="345dp"
-            android:background="@color/white"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="410dp"
+        android:layout_height="492dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="345dp"
+        android:background="@color/white"
+        android:padding="10dp"/>
 
-        <Button
-            android:id="@+id/info"
-            android:layout_width="410dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="-1dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="582dp"
-            android:visibility="gone"
-            android:background="@color/white"
-            android:text="시장 세부 정보" />
+    <Button
+        android:id="@+id/info"
+        android:layout_width="410dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="-1dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="582dp"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:text="시장 세부 정보" />
 
-    </RelativeLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

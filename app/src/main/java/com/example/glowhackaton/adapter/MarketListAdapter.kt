@@ -15,9 +15,10 @@ import com.example.glowhackaton.R
 import com.example.glowhackaton.SearchActivity
 import com.example.glowhackaton.SelectActivity
 import com.example.glowhackaton.StoreActivity
+import com.example.glowhackaton.network.DataModel
 
 class MarketListAdapter(
-    private val itemList: List<String>,
+    private val dataList: List<DataModel>,
     private val listener: OnItemClickListener
 ) : RecyclerView.Adapter<MarketListAdapter.ViewHolder>() {
 
@@ -47,8 +48,8 @@ class MarketListAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val currentItem = itemList[position]
-        holder.textView.text = currentItem
+        val currentItem = dataList[position]
+        holder.textView.text = currentItem.toString()
         }
-    override fun getItemCount(): Int = itemList.size
+    override fun getItemCount(): Int = dataList.size
 }

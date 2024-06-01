@@ -34,7 +34,8 @@
             android:layout_marginLeft="20dp"
             android:layout_alignParentTop="true"
             android:layout_marginTop="582dp"
-        android:background="@color/white"/>
+            android:background="@color/white"
+            android:padding="10dp"/>
 
     <Button
         android:id="@+id/info"

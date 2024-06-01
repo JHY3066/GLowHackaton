@@ -5,12 +5,12 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/some_id"
         android:layout_width="412dp"
         android:layout_height="915dp"
         android:clipToOutline="true"
-        android:background="#FBE5B8">
+        android:background="#FBE5B8"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/title"
@@ -26,7 +26,7 @@
             />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="375dp"
             android:layout_height="410dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="130dp"
@@ -64,7 +64,7 @@
                 android:id="@+id/menu"
                 android:layout_width="match_parent"
                 android:layout_height="82dp"
-                android:hint="메뉴와 가격을 입력해주세요\n ex) 제육덮밥 7000"
+                android:text="메뉴 입력하러 가기"
                 android:gravity="center"/>
 
         </LinearLayout>

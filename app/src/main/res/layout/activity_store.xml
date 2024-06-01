@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="1000dp">
 
     <RelativeLayout
         android:id="@+id/store"
@@ -111,8 +111,8 @@
             android:layout_height="33dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="187dp"
-            android:layout_marginTop="212dp"
+            android:layout_marginLeft="231dp"
+            android:layout_marginTop="106dp"
             android:gravity="center_vertical"
             android:text="@string/num"
             android:textAppearance="@style/some_id" />
@@ -153,72 +153,56 @@
             android:background="@drawable/store_info"
             android:text="MENU\n삼겹구이                          5000\n 오늘의 메뉴                    7000\n 제육볶음                         5500"
             android:textAppearance="@style/some_id"
-            android:gravity="left"/>
+            android:gravity="left"
+            android:padding="10dp"/>
 
-        <View
-            android:id="@+id/comment"
+        <ScrollView
+            android:id="@+id/comment_scroll"
             android:layout_width="330dp"
             android:layout_height="323dp"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="30dp"
             android:layout_alignParentTop="true"
             android:layout_marginTop="477dp"
-            android:background="@drawable/store_info"
-            />
+            android:background="@drawable/store_info">
 
-        <View
-            android:id="@+id/enter"
+            <LinearLayout
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                />
+
+        </ScrollView>
+
+        <LinearLayout
             android:layout_width="330dp"
-            android:layout_height="32dp"
+            android:layout_height="108dp"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
             android:layout_marginLeft="30dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="768dp"
-            android:background="@drawable/round"
-            />
+            android:layout_marginTop="806dp"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/send"
-            android:layout_width="46dp"
-            android:layout_height="32dp"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="314dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="768dp"
-            android:background="@drawable/round_after"
-            android:text="@string/send"
-            android:textAppearance="@style/some_idw"
-            />
+            <EditText
+                android:id="@+id/enter"
+                android:layout_width="284dp"
+                android:layout_height="32dp"
+                android:background="@drawable/round"
+                android:hint="댓글을 입력하세요"
+                android:padding="10dp"/>
 
+            <Button
+                android:id="@+id/send"
+                android:layout_width="46dp"
+                android:layout_height="32dp"
+                android:background="@drawable/round_after"
+                android:text="@string/send"
+                android:layout_marginTop="-3dp"
+                android:textAppearance="@style/some_idw" />
 
-
-        <TextView
-            android:id="@+id/speech"
-            android:layout_width="wrap_content"
-            android:layout_height="33dp"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="43dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="491dp"
-            android:background="@drawable/speech"
-            android:text="@string/speech"
-            android:textAppearance="@style/some_id"
-            android:gravity="center"
-            />
-
-        <TextView
-            android:id="@+id/speech2"
-            android:layout_width="112dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="43dp"
-            android:layout_marginTop="537dp"
-            android:background="@drawable/speech"
-            android:gravity="center"
-            android:text="@string/speech2"
-            android:textAppearance="@style/some_id" />
-
+        </LinearLayout>
 
     </RelativeLayout>
 
